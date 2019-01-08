@@ -1,14 +1,15 @@
 <?php require_once "includes/header.php"; ?>
-<?php require_once "includes/modals/dmv.php"; ?>
-<?php require_once "includes/modals/reg_car.php"; ?>
-<?php require_once "includes/modals/cac.php"; ?>
 <?php  
 	if(!isset($_COOKIE['Loggedin'])) {
 		redirect("login?user=mustbeloggedin");
 	} else if(!isset($_GET['type'])) {
 		redirect("dashboard?type=notSelected");
 	}
-
+?>
+<?php require_once "includes/modals/dmv.php"; ?>
+<?php require_once "includes/modals/reg_car.php"; ?>
+<?php require_once "includes/modals/cac.php"; ?>
+<?php
 	$type = $_GET['type'];
 
 	switch ($type) {
@@ -37,11 +38,11 @@
 							<!-- Sidebar -->
 							<div id="sidebar-wrapper">
 								<ul class="sidebar-nav">
-									<li><a href="mdt?type=civ&dmv=modal" data-toggle="modal" data-target=".dmv">DMV</a></li>
-									<li><a href="#">ATF</a></li>
-									<li><a href="#">911</a></li>
+									<li><a href="#" data-toggle="modal" data-target=".dmv">DMV</a></li>
+									<li><a href="#" data-toggle="modal" data-target=".reg_gun">ATF</a></li>
+									<li><a href="#" data-toggle="modal" data-target=".call_911">911</a></li>
 									<li><a href="mdt?type=civ&modal=cac" data-toggle="modal" data-target=".cac">Create Civilian</a></li>
-									<li><a href="#">Warrants</a></li>
+									<li><a href="#" data-toggle="modal" data-target=".warents">Warrants</a></li>
 								</ul>
 								<a href="dashboard" class="btn btn-danger btn-block" style="margin: 0 auto;"><i class="fas fa-tachometer-alt"></i> | Dashboard</a>
 							</div>

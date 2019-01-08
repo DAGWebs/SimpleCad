@@ -1,4 +1,4 @@
-<div class="modal fade cac" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade cac" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="cac">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header text-center">
@@ -8,29 +8,30 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="" method="post">
+        <form action="" method="post" class="ajax" id="cac">
+          <?php require_once "includes/form_handlers/register_civ.php"; ?>
          <div class="form-group">
            <div class="row">
              <div class="col-6">
-               <input type="text" name="first" placeholder="First Name" class="form-control">
+               <input type="text" name="first" placeholder="First Name" class="form-control" value="<?php echo $first; ?>">
              </div>
              <div class="col-6">
-               <input type="text" name="first" placeholder="First Name" class="form-control">
+               <input type="text" name="last" placeholder="Last Name" class="form-control" value="<?php echo $last; ?>">
              </div>
            </div>
          </div> 
          <div class="form-group">
-           <select name="" id=""  class="form-control">
+           <select name="gender" id=""  class="form-control">
              <option value="modal">Select Your Gender</option>
              <option value="modal">Male</option>
              <option value="modal">Female</option>
            </select>
          </div>
          <div class="form-group">
-          <input type="date" placeholder="Date Of Birth" class="form-control">
+          <input type="date" placeholder="Date Of Birth" class="form-control" name="dob" value="<?php echo $dob; ?>">
          </div>
          <div class="form-group">
-           <input type="text" placeholder="Current Address" class="form-control">
+           <input type="text" placeholder="Current Address" class="form-control" name="address" value="<?php echo $address; ?>">
          </div>
          <div class="row">
            <div class="col-6">
@@ -61,19 +62,19 @@
          <div class="row">
            <div class="col-6">
              <div class="form-group">
-               <input type="text" placeholder="Height (IN)" class="form-control">
+               <input type="text" placeholder="Height (IN)" class="form-control" name="height" value="<?php echo $height; ?>">
              </div>
            </div>
            <div class="col-6">
              <div class="form-group">
-               <input type="text" placeholder="Weight" class="form-control">
+               <input type="text" placeholder="Weight" class="form-control" name="weight" value="<?php echo $weight; ?>">
              </div>
            </div>
          </div>
          <div class="row">
            <div class="col-6">
              <div class="form-group">
-               <select name="hair" id="" class="form-control">
+               <select name="blood" id="" class="form-control">
                  <option value="No Option">Select Your Blood Type</option>
                  <option value="A+">A+</option>
                  <option value="A-">A-</option>
@@ -88,7 +89,7 @@
            </div>
            <div class="col-6">
              <div class="form-group">
-              <select name="eyes" id="" class="form-control">
+              <select name="organ" id="" class="form-control">
                  <option value="No Option">Select Your Organ Donor Status</option>
                  <option value="Yes">Yes</option>
                  <option value="No">No</option>
@@ -97,13 +98,14 @@
            </div>
          </div>
          <div class="form-group">
-              <select name="eyes" id="" class="form-control">
+              <select name="dlStatus" id="" class="form-control">
                  <option value="No Option">Driver's License Status</option>
                  <option value="Valid">Valid</option>
                  <option value="InValid">InValid</option>
+                 <option value="Not Obtained">Not Obtained</option>
                </select>
              </div>
-         <button class="btn btn-block btn-primary">Register My Civilian </button>
+         <button class="btn btn-block btn-primary" name="submit" onclick="$('#cac').modal({'backdrop': 'static'});">Register My Civilian</button>
         </form>
       </div>
     </div>
