@@ -46,7 +46,7 @@
 		$sql = "SELECT * FROM users WHERE user_username = '$username' OR user_email = '$username'";
 		$query = query($sql);
 
-		if(rowcount($query) == 1) {
+		if(rows($query) == 1) {
 			$row = assoc($query);
 			$db_pass = $row['user_password'];
 			$confirmed = $row['user_confirmed'];
