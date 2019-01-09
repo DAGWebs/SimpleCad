@@ -51,7 +51,7 @@
 							<div id="page-contnet-wrapper">
 								<div class="container-fluid">
 									<div class="row">
-										<div class="col-5 justify-content-center">
+										<div class="col-6 justify-content-center">
 											<h1 class="text-center">My Characters</h1>
 											';
 
@@ -60,11 +60,11 @@
 											if(rows($query) >= 1) {
 													while($rows = assoc($query)) {
 														echo '<div class="btn-block btn-primary style="padding: 10px;"">
-																<div class="row" style="padding: 10px;">
-																	<div class="col-2">
+																<a href="myciv?' . $rows["id_ss"] . '"><div class="row" style="padding: 10px; margin-bottom: 20px;">
+																	<div class="col-1">
 																		<img src="' . $rows["id_profile"] . '" alt="" class="rounded mx-auto d-block" width="60px" height="60px;">
 																	</div>
-																	<div class="col-3">
+																	<div class="col-3" style="padding-left: 20px;">
 																		' . $rows["id_first"] . ' ' . $rows["id_last"] . '
 																	</div>
 																	<div class="col-4">
@@ -73,7 +73,7 @@
 																	<div class="col-3">
 																	DOB: ' . $rows["id_date"] . '	
 																	</div>
-																</div>
+																</div></a>
 															</div>';
 																												}
 											} else {
