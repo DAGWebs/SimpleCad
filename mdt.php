@@ -14,7 +14,8 @@
 
 	switch ($type) {
 		case 'civ':
-			$menu = '
+
+			echo '
 						<nav class="navbar navbar-expand-lg">
 							<a class="navbar-brand" href="#">' . $com_name  . '</a>
 							
@@ -52,9 +53,33 @@
 									<div class="row">
 										<div class="col-5 justify-content-center">
 											<h1 class="text-center">My Characters</h1>
-											<div class="character"><a href="mdt?type=civ&dmv=modal" data-toggle="modal" data-target=".civ">My Civilian</a></div>
-										</div>
-										<div class="col-5 justify-content-center">
+											';
+
+											$sql = "SELECT * FROM identities WHERE user_id = '$user_id'";
+											$query = query($sql);
+											if(rows($query) >= 1) {
+													while($rows = assoc($query)) {
+														echo '<div class="btn-block btn-primary style="padding: 10px;"">
+																<div class="row" style="padding: 10px;">
+																	<div class="col-2">
+																		<img src="' . $rows["id_profile"] . '" alt="" class="rounded mx-auto d-block" width="60px" height="60px;">
+																	</div>
+																	<div class="col-3">
+																		' . $rows["id_first"] . ' ' . $rows["id_last"] . '
+																	</div>
+																	<div class="col-4">
+																		Social: ' . $rows["id_ss"] . '
+																	</div>
+																	<div class="col-3">
+																	DOB: ' . $rows["id_date"] . '	
+																	</div>
+																</div>
+															</div>';
+																												}
+											} else {
+												$identies = "You Currently have no identites created";
+											}
+										echo '<div class="col-5 justify-content-center">
 											<h1 class="text-center">My Cars</h1>
 										</div>
 									</div>
@@ -80,7 +105,7 @@
 	}
 ?>
 <!-- tool bar top -->
-<?php echo $menu; ?>
+
 
 
 <script>

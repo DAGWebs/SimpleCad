@@ -22,13 +22,13 @@
          </div> 
          <div class="form-group">
            <select name="gender" id=""  class="form-control">
-             <option value="modal">Select Your Gender</option>
-             <option value="modal">Male</option>
-             <option value="modal">Female</option>
+             <option value="No Option">Select Your Gender</option>
+             <option value="Male">Male</option>
+             <option value="Femaile">Female</option>
            </select>
          </div>
          <div class="form-group">
-          <input type="date" placeholder="Date Of Birth" class="form-control" name="dob" value="<?php echo $dob; ?>">
+          <input type="date" placeholder="Date Of Birth" class="form-control" name="dob" value="<?php echo $date; ?>" required>
          </div>
          <div class="form-group">
            <input type="text" placeholder="Current Address" class="form-control" name="address" value="<?php echo $address; ?>">

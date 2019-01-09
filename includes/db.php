@@ -9,7 +9,7 @@
 		return mysqli_query($con, $sql);
 	}
 
-	function rowcount($query) {
+	function rows($query) {
 		return mysqli_num_rows($query);
 	}
 

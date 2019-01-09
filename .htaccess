@@ -5,4 +5,4 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [NC,L]
 DirectoryIndex login.php
 
-ErrorDocument 404 http://localhost/cad/error404
+ErrorDocument 404 http://localhost/simplecad/error404
