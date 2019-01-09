@@ -90,7 +90,13 @@
 			} else {
 				setcookie('Loggedin', $username, time() + 86400);
 			}
-			redirect("dashboard");
+			echo '
+				<script>
+					setTimeout(function() {
+					  window.location.href = "dashboard";
+					}, .1);
+				</script>
+			';
 		}
 	} else {
 		$username = "";
