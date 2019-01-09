@@ -60,7 +60,7 @@
 											if(rows($query) >= 1) {
 													while($rows = assoc($query)) {
 														echo '<div class="btn-block btn-primary style="padding: 10px;"">
-																<a href="myciv?' . $rows["id_ss"] . '"><div class="row" style="padding: 10px; margin-bottom: 20px;">
+																<a href="myciv?ss=' . $rows["id_ss"] . '"><div class="row" style="padding: 10px; margin-bottom: 20px;">
 																	<div class="col-1">
 																		<img src="' . $rows["id_profile"] . '" alt="" class="rounded mx-auto d-block" width="60px" height="60px;">
 																	</div>

@@ -103,7 +103,7 @@
 			echo '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
 						  </button></div>';
 		} else {
-			$ss = rand(100, 999) . ' - ' . rand(10, 99) . ' - ' . rand(1000, 9999);
+			$ss = rand(100, 999) . '-' . rand(10, 99) . '-' . rand(1000, 9999);
 			$job = 'Civillian';
 			$profile_location = rand(1, 21);
 			switch($profile_location) {
