@@ -50,14 +50,14 @@
 		$sql = "SELECT * FROM users WHERE user_username = '$username'";
 		$query = query($sql);
 
-		if(rowcount($query) == 1) {
+		if(rows($query) == 1) {
 			array_push($errors, "Your Username Is Already Registered With Us!");
 		}
 
 		$sql = "SELECT * FROM users WHERE user_email = '$email'";
 		$query = query($sql);
 
-		if(rowcount($query) == 1) {
+		if(rows($query) == 1) {
 			array_push($errors, "Your Email Is Already Registered With Us!");	
 		}
 		
