@@ -39,24 +39,21 @@
 		<!-- Page Content -->
 		<div id="page-contnet-wrapper">
 			<div class="container-fluid">
-				<h1 class="text-center">My Wallet</h1>
-				<div class="row">
-					<div class="col-6">
-						<div class="dl">
-							<p>: 1228215</p>
-							<p class="issued">: DATE</p>
-							<p class="dob">: DATE</p>
-						</div>
-					</div>
-					<div class="col-6 text-center">
-						<div class="social">
-							<p class="ss-number">
-					          11200891
-					        </p>
-					        <p class="name">My Name</p>
+				<h1 class="text-center">My Civ</h1>
+				<div id="dmv" style="float: left; position: relative; height: 300px; width: 45%; background-color: #ffffff;">
+					<div id="watermark" style="padding-left: 20px; background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4uI8AuGV7_0Rbxhh9s2JmaMwbRjy85bSkvAey9cJoZjTDwse); width: 100%; height: 300px; background-repeat: no-repeat; background-position: center; background-size: 300px 300px;">
+						<div class="row" style="background-color: rgba(255, 255, 255, .6); width: 100%; height: 100%;">
+							<div class="col-4">test</div>
+							<div class="col-4">test</div>
+							<div class="col-4">test</div>
 						</div>
 					</div>
 				</div>
+				<!--<div id="ssa" style="float: right; position: relative; height: 300px; width: 45%; background-color: #ffffff;">
+					<div id="left" style="float: left;">test</div>
+					<div id="right" style="float: right;">test</div>
+					<div id="bottom" style="position: absolute; bottom: 0;">test</div>
+				</div> -->
 			</div>	
 		</div>
 	</div>
