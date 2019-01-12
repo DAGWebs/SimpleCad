@@ -1,0 +1,227 @@
+body {
+	background: #2c2c2c;
+	overflow-x: hidden;
+	background-image: url(../../../img/backgrounds/city.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #1a75ff;
+}
+
+h1 {
+	font-family: 'Black Ops One', cursive;
+}
+
+h2,h3,h4,h5 {
+	font-family: 'Staatliches', cursive;
+}
+
+p {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+	background: black;
+}
+
+a {
+	color: #800000;
+	font-weight: 700;
+}
+
+a:hover {
+	color: #4d0000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+footer {
+	background: #000;
+	padding: 5px;
+}
+
+.body-width {
+	margin-top: 150px;
+	width: 100%;
+	width: 90%;
+	padding: 30px;
+	margin: 250px auto;
+	color: #fff;
+	box-shadow: 10px 10px 10px black;
+
+}
+
+.Constable {
+	background-image: url(../../../img/backgrounds/a-group1.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #1a75ff;
+}
+
+.none {
+	background: #222;
+}
+
+.body-width .row .col-4 {
+	margin: 0 auto;
+}
+
+.body-width .row .col-1 {
+	border: 1px solid black;
+	max-width: 1px;
+	background: black;
+}
+
+.body-width {
+	font-weight: 1000;
+}
+
+.body-width h5{
+	margin-top: 10px;
+}
+
+.navbar-brand {
+	border-right: 2px solid #800000;
+	font-family: 'Black Ops One', cursive;
+}
+
+a.navbar-brand {
+	padding-right: 10px;
+}
+
+.navbar-toggler {
+	background: #800000;
+	color: black;
+}
+
+.navbar-toggler span {
+	color: black;
+}
+
+#menu {
+	display: block;
+	float: right;
+}
+
+#sidebar-wrapper {
+	position: relative;
+	z-index: 1;
+	width: 300px;
+	height: 100%;
+	overflow-y: hidden;
+	background: #222222;
+	opacity: 0.9;
+	transition: .9s;
+}
+
+#page-contnet-wrapper {
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+	transition: .8s;
+	width: 0;
+}
+
+#wrapper #page-main-content-wrapper {
+	padding-left: 300px;
+}
+
+.sidebar-nav {
+	padding-top: 30;
+	list-style: none;
+}
+
+.toggled ul {
+	display: none;
+}
+
+.sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #800000;
+}
+
+.sidebar-nav li a:hover {
+	background: #800000;
+	color: white;
+}
+
+.top {
+	margin-top: 50px;
+}
+
+.civ {
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px black;
+	margin-bottom: 20px;
+}
+
+#page-contnet-wrapper {
+	margin-left: 300px;
+	width: calc(100% - 300px);
+}
+
+.social {
+	background-image: url(../../../img/cad/ss.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 460px;
+	padding: 110px;
+	color: black;
+	border-radius: 10px;
+}
+
+.dl {
+	background-image: url(../../../img/cad/id.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 460px;
+	padding: 110px;
+	color: black;
+	border-radius: 10px;
+}
+
+.social p {
+	font-size: 40px;
+	padding-top: 60px;
+}
+
+.dl p {
+	font-size: 22px;
+	padding-top: 19px;
+	padding-left: 160px;
+	font-weight: bold;
+	position: absolute;
+}
+
+.dl p.issued {
+	font-size: 22px;
+	padding-top: 51px;
+	padding-left: 160px;
+	font-weight: bold;
+}
+
+.dl p.dob {
+	font-size: 22px;
+	padding-top: 51px;
+	padding-left: 160px;
+	font-weight: bold;
+}
+
+.social .name {
+	font-family: 'Cedarville Cursive', cursive;
+	padding-top: 90px;
+}
