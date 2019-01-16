@@ -66,6 +66,9 @@
 		case $pageRoot . 'login.php':
 			$pageTitle = 'Login';
 			break;
+		case $pageRoot . 'dashboard.php';
+			$pageTitle = 'Dashboard';
+			break;
 		case $pageRoot . 'register.php';
 			$pageTitle = 'Register';
 			break;
@@ -73,7 +76,35 @@
 			$pageTitle = 'Documentation';
 			break;
 		case $pageRoot . 'mdt.php';
-			$pageTitle = 'MDT';
+			if(isset($_GET['type'])) {
+				$type = $_GET['type'];
+				if($type == 'civ') {
+					$pageTitle = 'CIV MDT';
+				} else if($type == 'fire') {
+					$pageTitle = 'Fire MDT';
+				} else if($type == 'dispatch') {
+					$pageTitle = 'Dispatch MDT';
+				} else if($tytpe == 'police') {
+					$pageTitle = 'Police MDT';
+				}
+			} else {
+				$pageTitle = 'MDT';
+			}
+			break;
+		case $pageRoot . 'myciv.php';
+			if(isset($_GET['ss'])) {
+				$ss = $_GET['ss'];
+				$sql = "SELECT * FROM identities WHERE id_ss = '$ss'";
+				$query = query($sql);
+				if(rows($query)) {
+					$row = assoc($query);
+					$pageTitle = $row['id_first'] . ' ' . $row['id_last'];
+				} else {
+					$pageTitle = 'MyCiv';
+				}
+			} else {
+				$pageTitle = 'MyCiv';
+			}
 			break;
 		default:
 			$pageTitle = "Cad System";
