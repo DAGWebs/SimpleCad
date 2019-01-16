@@ -18,6 +18,12 @@
 	$row = assoc($query);
 	$theme = $row['setting_value'];
 
+	$sql = "SELECT * FROM settings WHERE setting_name = 'User Validation Required'";
+	$query = query($sql);
+
+	$row = assoc($query);
+	$required = $row['setting_value'];
+
 	$sql = "SELECT * FROM settings WHERE setting_name = 'Community Description'";
 	$query = query($sql);
 
@@ -63,17 +69,20 @@
 
 	$page = $_SERVER["PHP_SELF"];
 	switch($page) {
-		case $pageRoot . 'login.php':
-			$pageTitle = 'Login';
+		case $pageRoot . 'index.php':
+			$pageTitle = 'Admin';
 			break;
-		case $pageRoot . 'register.php';
-			$pageTitle = 'Register';
+		case $pageRoot . 'settings.php';
+			$pageTitle = 'Settings';
 			break;
-		case $pageRoot . 'documentation.php';
-			$pageTitle = 'Documentation';
+		case $pageRoot . 'staff.php';
+			$pageTitle = 'Staff';
 			break;
-		case $pageRoot . 'mdt.php';
-			$pageTitle = 'MDT';
+		case $pageRoot . 'tickets.php';
+			$pageTitle = 'Support';
+			break;
+		case $pageRoot . 'users.php';
+			$pageTitle = 'Users';
 			break;
 		default:
 			$pageTitle = "Cad System";

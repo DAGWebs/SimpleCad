@@ -4,7 +4,7 @@
 	$db_host = "localhost";
 	$db_name = "SimpleCad";
 
-  $pageRoot = '/simplecad/'; //set to website url followed by a / IE http://google.com/
+  $pageRoot = '/SimpleCad/admin/'; //set to website url followed by a /admin/ IE http://google.com/admin/
 
   define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');
 

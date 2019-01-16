@@ -11,8 +11,9 @@
 
 							if(rows($query) > 0) {
 								while($row = assoc($query)) {
-									$val_username = $row["user_username"];
-									$validate_user = 'validate_' . $val_username;
+									$val_id = $row["user_id"];
+									$validate_user = 'validate_' . $val_id;
+									
 									echo '
 										<div class="row" style="padding:10px; margin-top: 10px; background: #222; border-radius: 10px;">
 											<div class="col-4">
@@ -25,21 +26,19 @@
 											</div>
 											<div class="col-4">
 												<form action="" method="post">
-													<button class="btn btn-danger btn-block" name="validate_' . $val_username . '">Validate User</button>
+													<button class="btn btn-danger btn-block" name="' . $validate_user . '">Validate User</button>
 												</form>
 											</div>
 										</div>	
 									';
-
-									echo $validate_user;
-									if(isset($_POST['validate_' . $val_username])) {
-										$sql = "UPDATE users SET user_confirmed = 1 WHERE user_username = '$username'";
+									if(isset($_POST[$validate_user])) {
+										$sql = "UPDATE users SET user_confirmed = 1 WHERE user_id = '$val_id'";
 										query($sql);
 										header("Refresh:0");
 									}
 								}
 							} else {
-								echo "<h2 class='text-center'>All Users Have Are Confirmed And Can Login</h2>";
+								echo "<h4 class='text-center'>All Users Have Been Confirmed And Can Login</h4>";
 							}
 						?>
 					</div>

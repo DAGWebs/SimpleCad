@@ -4,7 +4,15 @@
 	$db_host = "localhost";
 	$db_name = "SimpleCad";
 
-  $pageRoot = '/simplecad/'; //set to website url followed by a / IE http://google.com/
+  $con = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+
+  $sql = "SELECT * FROM settings WHERE setting_name = 'Community Name'";
+  $query = mysqli_query($con, $sql);
+
+  $row = mysqli_fetch_assoc($query);
+  $com_name = $row['setting_value'];
+
+  $pageRoot = $com_name . '/'; // DO NOT TOUCH
 
   define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');
 
