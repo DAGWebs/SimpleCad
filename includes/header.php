@@ -22,7 +22,13 @@
 	$query = query($sql);
 
 	$row = assoc($query);
+
 	$communityDescription = $row['setting_value'];
+	$sql = "SELECT * FROM settings WHERE setting_name = 'Max Identities'";
+	$query = query($sql);
+
+	$row = assoc($query);
+	$max = $row['setting_value'];
 
 	$sql = "SELECT * FROM settings WHERE setting_name = 'Login Text'";
 	$query = query($sql);

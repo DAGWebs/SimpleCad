@@ -30,8 +30,6 @@
 		$first = ucfirst($first);
 		$last = ucfirst($last);
 
-		echo $date;
-
 		$errors = [];
 
 		if(empty($first)) {
@@ -88,7 +86,7 @@
 		$sql = "SELECT * FROM identities WHERE user_id = '$user_id'";
 		$query = query($sql);
 
-		if(rows($query) > 3) {
+		if(rows($query) >= $max) {
 			array_push($errors, "You Have Reached The Max Amount of Identities You Can Create");
 		}
 
@@ -106,6 +104,8 @@
 			$ss = rand(100, 999) . '-' . rand(10, 99) . '-' . rand(1000, 9999);
 			$job = 'Civillian';
 			$profile_location = rand(1, 21);
+			$time = date("h:i A", time());
+			$date_created = date("m-d-Y");
 			switch($profile_location) {
 				case 1:
 					$profile = 'assets/img/profile/default/avatar.png';
@@ -172,7 +172,7 @@
 					break;
 			}
 
-			$sql = "INSERT INTO identities (id_first, id_last, id_gender, id_date, id_address, id_hair, id_eyes, id_height, id_weight, id_blood, id_organ, id_dlStatus, id_ss, id_job, id_profile, user_id) VALUES ('$first', '$last', '$gender', '$date', '$address', '$hair', '$eyes', '$height', '$weight', '$blood', '$organ', '$dlStatus', '$ss', '$job', '$profile', '$user_id')";
+			$sql = "INSERT INTO identities (id_first, id_last, id_gender, id_date, id_address, id_hair, id_eyes, id_height, id_weight, id_blood, id_organ, id_dlStatus, id_ss, id_job, id_profile, user_id, id_time, id_date_created) VALUES ('$first', '$last', '$gender', '$date', '$address', '$hair', '$eyes', '$height', '$weight', '$blood', '$organ', '$dlStatus', '$ss', '$job', '$profile', '$user_id', '$time', '$date_created')";
 
 			query($sql);
 
