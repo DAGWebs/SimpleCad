@@ -1,50 +1,87 @@
-<?php  
-	$db_username = "root";
-	$db_password = "";
-	$db_host = "localhost";
-	$db_name = "SimpleCad";
+<?php
 
-  $con = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+/**
+ *
+ * SET UP DEFAULT CONTROLLER
+ *
+ */
 
-  $sql = "SELECT * FROM settings WHERE setting_name = 'Site Location'";
-  $query = mysqli_query($con, $sql);
+define('DEFAULT_CONTROLLER', "Login"); //only called if not defined in url
 
-  $row = mysqli_fetch_assoc($query);
-  $com_name = $row['setting_value'];
+/**
+ *
+ * set up debuggin
+ *
+ */
 
-  $pageRoot = $com_name; // DO NOT TOUCH
+define('DEBUG', true);
 
-  define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');
+/**
+ *
+ * DATABASE INFO
+ *
+ */
 
-   /*======================================================
-   =            DO NOT TOUCH (unless you know what you are doing) OR YOU WILL BRAKE it           =
-   ======================================================*/
-   
-   define('LOGIN', ROOT . 'login');
-   define('RESET', ROOT . 'reset');
-   define('ADMIN', ROOT . 'admin');
-   define('ERROR', ROOT . 'error404');
-   define('REGISTER', ROOT . 'register');
-   define('PROFILE', ROOT . 'profile');
-   
-   /*=====  End of DO NOT TOUCH OR YOU WILL BRAKE  ======*/
+$db_host = '127.0.0.1';
+$db_name = 'simplecad';
+$db_user = 'root';
+$db_pass = '';
 
-   /**
-    *
-    * THIS IS IMPORTANT NOT TO TOUCH -- NO TOUCHY TOUCHY Below this point! THINGS WILL BRAKE
-    *
-    */
+////////////////////////
+//	   DO NOT CHANGE  //
+///////////////////////
 
-   $creds = [
-      'db_user' => $db_username,
-      'db_pass' => $db_password,
-      'db_host' => $db_host,
-      'db_name' => $db_name
-   ];
+$creds = [
+	'host' => $db_host,
+	'name' => $db_name,
+	'user' => $db_user,
+	'pass' => $db_pass
+];
 
-   foreach($creds as $cred => $value) {
-      define(strtoupper($cred), $value);
-   }
-   
-   
-?>
+foreach($creds as $cred => $value) {
+	define(strtoupper($cred), $value);
+}
+
+//////////////////////////////
+///     You can change now  //
+//////////////////////////////
+
+/**
+ *
+ * DEFAULT LAYOUT
+ *
+ */
+
+define('DEFAULT_LAYOUT', 'default');
+
+/**
+ *
+ * site title
+ *
+ */
+
+define('SITE_TITLE', 'SimpleCad');
+define('SITE_DESC','SimpleCad A cad simply developed!');
+
+/**
+ *
+ * SET ROOT FOLDER
+ *
+ */
+
+define("PROOT", '/cad/');
+
+/**
+ *
+ * sessions
+ *
+ */
+
+define('CURRENT_USER_SESSION_NAME', 'jkasoidfhgweiurgasjkhhiuajwks');
+
+define('REMEMBER_ME_COOKIE_NAME', 'akuhrweuwfoawasokdfwoeifhaesdfg');
+
+define('REMEMBER_COOKIE_EXPIRY', + 2592000); //time in seconds
+
+
+
