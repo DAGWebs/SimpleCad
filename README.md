@@ -5,7 +5,7 @@
 ```
 1. First Start Out by downloading the software. Dont worry just follow the instructions when downloading.Link at bottom of page
 2. Get github desktop (Link at bottom of page). You need a github account!
-3. When it launches go to File => Clone Repository => Select ms2.0
+3. When it launches go to File => Clone Repository => Select SimpleCad-v.1.2
 4. Select Directory Location under Local Path (Find Where you installed xampp then select htdocs) then click clone
 5. Go to the Home Page
 ```
@@ -30,6 +30,8 @@
 
 4. Edit only the parts between the '' with your database info
 
+5. Now Make Sure you change the PROOT aka project Root to the directory you are working in
+
 ```
 
 ## Give your self Admin perms
@@ -47,6 +49,6 @@
 
 1. [Register An Account](http://localhost/ms2.0/register)
 2. [PHPmyadmin](http://localhost/phpmyadmin)
-3. [Home Page](http://localhost/ms2.0)
+3. [Home Page](http://localhost/simplecad)
 4. [Needed Software](https://www.apachefriends.org/index.html)
 5. [github Desktop](https://desktop.github.com/)
