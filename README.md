@@ -30,7 +30,7 @@
 
 4. Edit only the parts between the '' with your database info
 
-5. Now Make Sure you change the PROOT aka project Root to the directory you are working in
+5. Now Make Sure you change the PROOT aka project Root to the directory you are working in Online servers use a /
 
 ```
 
