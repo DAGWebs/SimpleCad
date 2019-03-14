@@ -1,4 +1,4 @@
-# Hello and Welcome to the Quantum Coin Basic Setup
+# Hello and Welcome to the SimpleCad Basic Setup
 
 **First Legs Get Started With Installing on a local Computer**
 
