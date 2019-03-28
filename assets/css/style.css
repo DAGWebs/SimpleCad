@@ -1,0 +1,20 @@
+.pull-left {
+	text-align: left;
+}
+
+.front-form {
+	padding: 10px;
+	margin-top: 170px;
+	border-radius: 10px 10px 0 0;
+}
+
+.main-cont-form {
+	padding: 10px;
+}
+
+.form-header {
+	padding: 15px;
+	margin-bottom: 15px;
+	border: 3px solid lightblue;
+	border-radius: 10px 10px 0 0;
+}
